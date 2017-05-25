@@ -1,0 +1,165 @@
+#!/usr/bin/env bash
+#
+# 安装引导程序 - 进行初始化设定
+
+cd "$(dirname "$0")/.." # 定位到执行当前脚本的目录上级
+DOTFILES_ROOT=$(pwd -P) # 获取目录路径地址赋予变量 DOTFILES_ROOT
+
+set -e # 标记执行以下脚本后遇到返回值非0 则立即退出
+
+echo ''
+
+# 定义一些文本打印函数，用来显示装逼效果
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+user () {
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
+# 软链文件的函数
+link_file () {
+  local src=$1 dst=$2 # 定义 目标文件地址 和 源文件地址
+
+  # 定义变量
+  local overwrite= backup= skip=
+  local action=
+
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ] # 如果目标文件是 "文件" 或 "文件夹" 或 "软链接" 则进行以下操作
+  then
+
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ] # 检查批量操作变量
+    then
+
+      local currentSrc="$(readlink $dst)" #读取软连接真实地址
+
+      if [ "$currentSrc" == "$src" ] # 如果与源文件相同 则跳过
+      then
+
+        skip=true;
+
+      else
+
+        user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
+        [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        read -n 1 action # 等待用户输入
+
+        case "$action" in
+          o )
+            overwrite=true;;
+          O )
+            overwrite_all=true;;
+          b )
+            backup=true;;
+          B )
+            backup_all=true;;
+          s )
+            skip=true;;
+          S )
+            skip_all=true;;
+          * )
+            ;;
+        esac
+
+      fi
+
+    fi
+
+    overwrite=${overwrite:-$overwrite_all}
+    backup=${backup:-$backup_all}
+    skip=${skip:-$skip_all}
+
+    if [ "$overwrite" == "true" ]
+    then
+      rm -rf "$dst"
+      success "removed $dst"
+    fi
+
+    if [ "$backup" == "true" ]
+    then
+      mv "$dst" "${dst}.backup"
+      success "moved $dst to ${dst}.backup"
+    fi
+
+    if [ "$skip" == "true" ]
+    then
+      success "skipped $src"
+    fi
+  fi
+
+  if [ "$skip" != "true" ]  # "false" or empty
+  then
+    ln -s "$1" "$2" # 建立软连接
+    success "linked $1 to $2"
+  fi
+}
+
+# 安装homebrew软件包
+install_homebrew () {
+  if test ! $(which brew) # 查找brew命令,如果未找到则执行安装brew命令
+  then
+    echo "  Installing Homebrew for you..."
+
+    # Install the correct homebrew for each OS type
+    if test "$(uname)" = "Darwin" # 检查操作系统 -> mac系统安装brew
+    then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    elif test "$(expr substr $(uname -s) 1 5)" = "Linux" #检查操作系统 -> Linux系统安装brew
+    then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    fi
+
+  fi
+}
+
+# 安装终极脚本oh my zsh
+install_ohmyzsh () {
+  if [ ! -d ~/.oh-my-zsh ] # 检查用户目录下是否存在.oh-my-zsh文件夹，不存在则安装oh-my-zsh
+  then
+    info '  Installing oh-my-zsh'
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh # 下载安装脚本并执行
+  fi
+}
+
+# 安装dotfile-软链配置文件
+install_dotfiles () {
+  info '  Installing dotfiles'
+
+  local overwrite_all=false backup_all=false skip_all=false # 定义局部变量以便进行后面的批量默认执行操作
+
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*') # 在 ~/.dotfile目录下 查找后缀为symlink的文件 最大深度为2级目录，忽略.git目录
+  do
+    dst="$HOME/.$(basename "${src%.*}")" # 从循环中的源地址截取basename,前面加一个“.”,然后再加上用户主目录，构成了软连接的目标dotfile
+    link_file "$src" "$dst" # 软链接文件
+  done
+}
+
+install_homebrew
+install_ohmyzsh
+install_dotfiles
+
+# If we're on a Mac, let's install and setup homebrew.
+if [ "$(uname -s)" == "Darwin" ]
+  then
+    info "installing dependencies"
+  if source bin/dot
+  then
+    success "dependencies installed"
+  else
+    fail "error installing dependencies"
+  fi
+fi
+
+echo ''
+echo '  All installed!'
