@@ -1,0 +1,22 @@
+# -*- shell-script -*-
+#
+# Usage:
+#
+# $ pwd
+# ~/
+# $ lazyclone https://github.com/user/repo.git
+# repo
+# Cloning into 'repo'...
+# remote: Counting objects: 1477, done.
+# remote: Compressing objects: 100% (534/534), done.
+# remote: Total 1477 (delta 952), reused 1462 (delta 940)
+# Receiving objects: 100% (1477/1477), 268.48 KiB | 202 KiB/s, done.
+# Resolving deltas: 100% (952/952), done.
+# $ pwd
+# ~/repo
+function lazyclone {
+  url=$1;
+  reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+  git clone $url $reponame;
+  cd $reponame;
+}
