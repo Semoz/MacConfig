@@ -15,8 +15,11 @@ echo "› brew update"
 brew update
 
 # 显示所有文件和文件夹
-echo "› $ZSH/bin/togglehidden"
-$ZSH/bin/togglehidden
+echo "› $ZSH/bin/Switch_File_Hidden"
+$ZSH/bin/Switch_File_Hidden
+# 设置所有来源
+echo "› $ZSH/bin/Switch_File_Hidden"
+$ZSH/bin/Switch_Any_Source
 
 # Install software
 echo "› $ZSH/script/install"

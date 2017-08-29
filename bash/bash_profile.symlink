@@ -88,7 +88,7 @@ alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
 
 #   Add Maven Enviroment
 #   ------------------------------------------------------------
-export MAVEN_HOME=~/Development/Env/Maven/apache-maven-3.3.9
+export MAVEN_HOME=/Volumes/Mac_Data/Development/Environment/Maven/apache-maven-3.3.9
 export PATH=$PATH:$MAVEN_HOME/bin
 
 #   Add Android IDE Path
@@ -100,7 +100,7 @@ export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-alias subl='~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
+#alias subl='~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
 alias ls='ls -GFhl'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
