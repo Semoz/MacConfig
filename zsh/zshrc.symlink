@@ -100,5 +100,7 @@ alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
 
 #   Add Maven Enviroment
 #   ------------------------------------------------------------
-export MAVEN_HOME=/Volumes/Mac_Data/Development/Environment/Maven/apache-maven-3.3.9
+export MAVEN_HOME=$HOME/Documents/Development/Environment/Maven/apache-maven
 export PATH=$PATH:$MAVEN_HOME/bin
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
