@@ -12,7 +12,7 @@ sudo scutil --set LocalHostName "Semoz-MBP"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Semoz-MBP"
 #----------------------------------------------------
 #设置休眠等待时间为24小时
-sudo pmset -a standbydelay 86400
+#sudo pmset -a standbydelay 86400
 #----------------------------------------------------
 #关闭开机"当"声音
 sudo nvram SystemAudioVolume=" "

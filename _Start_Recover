@@ -1,0 +1,21 @@
+#!/bin/sh
+cd "$(dirname "$0")/.." #MacData目录
+ROOT_PATH=$(pwd -P)
+set -e
+
+MAC_CONFIG_PATH="MacConfig"
+
+#1.链接工具脚本
+$MAC_CONFIG_PATH"/SystemBin/install"
+
+#2.链接文件以及安装插件
+$MAC_CONFIG_PATH"/bin/install"
+
+#3.链接文件目录
+$MAC_CONFIG_PATH"/LinkFiles/install"
+
+#4 Dotfile
+$MAC_CONFIG_PATH"/DotFiles/install"
+
+
+#source script/3-install

@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+source message
+info "-------------------------------------------------------------------------"
+info "#########################################################################"
+info "#"
+info "#\t\t Install Base Plus & Link Base Path"
+info "#"
+info "#########################################################################"
+info ""
+info "Current Directory:\t"$ROOT_PATH
+info ""
+for src in $(find "$ROOT_PATH" -maxdepth 2 -name '*.sh' -not -path '*.git*')
+	do
+		$src
+		#DESTINATION_FILE="/usr/local/bin/"$(basename "${src%.*}")
+		#SOURCE_FILE=$ROOT_PATH"/config/"$(basename "${src%*}")
+		#sudo ln -s -f "$SOURCE_FILE" "$DESTINATION_FILE"
+		#success ""$DESTINATION_FILE"\t-->\t"$SOURCE_FILE
+done
+info ""
+info "-------------------------------------------------------------------------"

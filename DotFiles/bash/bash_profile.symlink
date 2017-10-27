@@ -76,24 +76,29 @@ unset file;
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
 
-#   Add Java SDK Enviroment Switch
-#   use jdk7/jdk8 to Switch jdk version, default jdk8
-#   ------------------------------------------------------------
+###################################################################################
+#												Java SDK Environment 																			#
+#   use jdk7/jdk8 to Switch jdk version, default jdk8															#
+#----------------------------------------------------------------------------------
 export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
 export JAVA_HOME=$JAVA_8_HOME
-
 alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
 alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
+###################################################################################
 
-#   Add Maven Enviroment
-#   ------------------------------------------------------------
-export MAVEN_HOME=/Volumes/Mac_Data/Development/Environment/Maven/apache-maven-3.3.9
+#############################################################################
+#														Maven Environment 															#
+-----------------------------------------------------------------------------
+export MAVEN_HOME=$HOME/Documents/Development/Environment/Maven/apache-maven
 export PATH=$PATH:$MAVEN_HOME/bin
+#############################################################################
+
+
 
 #   Add Android IDE Path
 #   ------------------------------------------------------------
-export PATH=${PATH}:~/Library/Android/sdk/platform-tools 
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 
 
 #   -----------------------------

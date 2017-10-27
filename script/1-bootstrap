@@ -2,7 +2,7 @@
 #
 # 安装引导程序 - 进行初始化设定
 
-cd "$(dirname "$0")/.." # 定位到执行当前脚本的目录上级
+cd "$(dirname "$0")/../.." # 定位到执行当前脚本的目录上级
 DOTFILES_ROOT=$(pwd -P) # 获取目录路径地址赋予变量 DOTFILES_ROOT
 
 set -e # 标记执行以下脚本后遇到返回值非0 则立即退出
@@ -138,7 +138,7 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false # 定义局部变量以便进行后面的批量默认执行操作
 
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*') # 在 ~/.dotfile目录下 查找后缀为symlink的文件 最大深度为2级目录，忽略.git目录
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*') # 在 ~/.dotfile目录下 查找后缀为symlink的文件 最大深度为2级目录，忽略.git目录
   do
     dst="$HOME/.$(basename "${src%.*}")" # 从循环中的源地址截取basename,前面加一个“.”,然后再加上用户主目录，构成了软连接的目标dotfile
     link_file "$src" "$dst" # 软链接文件

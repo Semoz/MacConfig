@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+info "-------------------------------------------------------------------------"
+info ""
+info "3. Link UserData Files.."
+info ""
+info "Current Directory:\t"$ROOT_PATH
+info ""
+for src in $(find "$ROOT_PATH" -maxdepth 2 -name '*.sh' -not -path '*.git*')
+	do
+		$src
+		#DESTINATION_FILE="/usr/local/bin/"$(basename "${src%.*}")
+		#SOURCE_FILE=$ROOT_PATH"/config/"$(basename "${src%*}")
+		#sudo ln -s -f "$SOURCE_FILE" "$DESTINATION_FILE"
+		#success ""$DESTINATION_FILE"\t-->\t"$SOURCE_FILE
+done
+info ""
+info "-------------------------------------------------------------------------"
