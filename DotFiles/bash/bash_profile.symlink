@@ -76,23 +76,26 @@ unset file;
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
 
-###################################################################################
-#												Java SDK Environment 																			#
-#   use jdk7/jdk8 to Switch jdk version, default jdk8															#
-#----------------------------------------------------------------------------------
+################################################################################
+#-------------------------------------------------------------------------------
+#												Java SDK Environment
+#   使用 "jdk7" "jdk8" "jdk9" 来切换jdk版本，默认jdk8
+#-------------------------------------------------------------------------------
 export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+export JAVA_9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export JAVA_HOME=$JAVA_8_HOME
 alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
 alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
-###################################################################################
+alias jdk9='export JAVA_HOME=$JAVA_9_HOME'
+#-------------------------------------------------------------------------------
 
-#############################################################################
-#														Maven Environment 															#
------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+#												Maven Environment
+#-------------------------------------------------------------------------------
 export MAVEN_HOME=$HOME/Documents/Development/Environment/Maven/apache-maven
 export PATH=$PATH:$MAVEN_HOME/bin
-#############################################################################
+#-------------------------------------------------------------------------------
 
 
 

@@ -94,9 +94,9 @@ source $ZSH/oh-my-zsh.sh
 #												Java SDK Environment
 #   使用 "jdk7" "jdk8" "jdk9" 来切换jdk版本，默认jdk8
 #-------------------------------------------------------------------------------
-export JAVA_7_HOME=$HOME/Documents/Development/Environment/Java/jdk7
-export JAVA_8_HOME=$HOME/Documents/Development/Environment/Java/jdk8
-export JAVA_9_HOME=$HOME/Documents/Development/Environment/Java/jdk9
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+export JAVA_9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export JAVA_HOME=$JAVA_8_HOME
 alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
 alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
@@ -118,7 +118,7 @@ export PATH=$PATH:$MAVEN_HOME/bin
 ################################################################################
 #    MAKE TERMINAL BETTER
 ################################################################################
-#alias subl='~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
+alias subl='~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
 alias ls='ls -GFhl'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
