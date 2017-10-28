@@ -3,6 +3,8 @@ set -e
 cd "$(dirname "$0")"
 DOTFILES_ROOT=$(pwd -P)
 
+source message
+
 for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
 do
   dst="$HOME/.$(basename "${src%.*}")"
