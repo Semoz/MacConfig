@@ -16,7 +16,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 #-------------------------------------------------------------------------------
 # 关闭开机"当"的一声
 # > 设置方式
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
 # > 解除方式
 # sudo nvram -d SystemAudioVolume
 #-------------------------------------------------------------------------------
@@ -35,17 +35,17 @@ sudo nvram SystemAudioVolume=" "
 # 11: Launchpad
 # 12: 通知中心 Notification Center
 # 左上角 设置启动屏保
-defaults write com.apple.dock wvous-tl-corner -int 5
-defaults write com.apple.dock wvous-tl-modifier -int 0
+# defaults write com.apple.dock wvous-tl-corner -int 5
+# defaults write com.apple.dock wvous-tl-modifier -int 0
 # 右上角
-#defaults write com.apple.dock wvous-tr-corner -int 2
-#defaults write com.apple.dock wvous-tr-modifier -int 0
+# defaults write com.apple.dock wvous-tr-corner -int 2
+# defaults write com.apple.dock wvous-tr-modifier -int 0
 # 左下角
-#defaults write com.apple.dock wvous-bl-corner -int 11
-#defaults write com.apple.dock wvous-bl-modifier -int 0
+# defaults write com.apple.dock wvous-bl-corner -int 11
+# defaults write com.apple.dock wvous-bl-modifier -int 0
 # 右下角
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
+# defaults write com.apple.dock wvous-br-corner -int 4
+# defaults write com.apple.dock wvous-br-modifier -int 0
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------

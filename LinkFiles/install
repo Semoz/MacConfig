@@ -12,7 +12,7 @@ info "#########################################################################"
 info ""
 info "Current Directory:\t"$ROOT_PATH
 info ""
-for src in $(find "$ROOT_PATH" -maxdepth 2 -name '*.sh' -not -path '*.git*')
+for src in $(find "$ROOT_PATH" -maxdepth 3 -name '*.sh' -not -path '*.git*')
 	do
 		$src
 		info ""

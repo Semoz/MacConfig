@@ -41,6 +41,6 @@ SOURCE_PATH=$HOME"/Virtual Machine/Vmware"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link Parallels Create Path
-DESTINATION_PATH=$HOME"/Parallels"
-SOURCE_PATH=$HOME"/Virtual Machine/Parallels"
-link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+# DESTINATION_PATH=$HOME"/Parallels"
+# SOURCE_PATH=$HOME"/Virtual Machine/Parallels"
+# link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

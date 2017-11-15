@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+#set -e
 mount_dmg "$1"
 cp -rf /Volumes/"$2"/*.app /Applications
 echo "> 安装"$2"成功"
