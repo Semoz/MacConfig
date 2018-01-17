@@ -1,0 +1,4 @@
+#!/bin/sh
+DESTINATION_PATH=$HOME"/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+SOURCE_PATH=$HOME"/Dropbox/Sublime/Preferences.sublime-settings"
+link_data_file "$SOURCE_PATH" "$DESTINATION_PATH"

@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+
+source message
+
+info "-------------------------------------------------------------------------"
+info "#########################################################################"
+info "#"
+info "#\t\t Install Brew Softwares"
+info "#"
+info "#########################################################################"
+info ""
+info "Current Directory:\t"$ROOT_PATH
+info ""
+info "› brew bundle"
+brew update
+brew upgrade
+brew bundle
+brew cleanup
+info ""
+info "-------------------------------------------------------------------------"
