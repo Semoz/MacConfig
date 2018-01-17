@@ -51,8 +51,14 @@ FileData/FinalCutPro/*
 FileData/MuMuShare/*
 !FileData/MuMuShare/.gitkeep
 
-FileData/Pictures/*
-!FileData/Pictures/.gitkeep
+FileData/Pictures/Others/*
+!FileData/Pictures/Others/.gitkeep
+
+FileData/Pictures/Screenshots/*
+!FileData/Pictures/Screenshots/.gitkeep
+
+FileData/Pictures/Wallpaper/*
+!FileData/Pictures/Wallpaper/.gitkeep
 
 # === UserData ===
 UserData/Dropbox/*
