@@ -110,6 +110,11 @@ export MAVEN_HOME=$HOME/Documents/Development/Environment/Maven/apache-maven
 export PATH=$PATH:$MAVEN_HOME/bin
 #-------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+#												Android Environment
+#-------------------------------------------------------------------------------
+export PATH=${PATH}:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools
+#-------------------------------------------------------------------------------
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
