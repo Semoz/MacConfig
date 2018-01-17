@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#打开微信聊天记录位置
-open ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat

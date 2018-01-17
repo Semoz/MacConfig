@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService
-rm -f ~/Library/Developer/CoreSimulator/Devices
