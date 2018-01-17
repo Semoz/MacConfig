@@ -1,4 +1,62 @@
+# === SYSTEM ===
 .DS_Store
-Development
-FileData
-UserData
+
+# === Development ===
+# ---
+Development/Environment/CXF/*
+!Development/Environment/CXF/.gitkeep
+
+Development/Environment/Maven/*
+!Development/Environment/Maven/.gitkeep
+
+Development/Environment/Tomcat/*
+!Development/Environment/Tomcat/.gitkeep
+
+# ---
+Development/IDE/*
+!Development/IDE/.gitkeep
+
+# ---
+Development/Project/Android/*
+!Development/Project/Android/.gitkeep
+
+Development/Project/C#/*
+!Development/Project/C#/.gitkeep
+
+Development/Project/GitHub/*
+!Development/Project/GitHub/.gitkeep
+
+Development/Project/iOS/*
+!Development/Project/iOS/.gitkeep
+
+Development/Project/Java/*
+!Development/Project/Java/.gitkeep
+
+Development/Project/JS/*
+!Development/Project/JS/.gitkeep
+
+Development/Project/VBS/*
+!Development/Project/VBS/.gitkeep
+# ---
+Development/Workspace/eclipse/*
+!Development/Workspace/eclipse/.gitkeep
+
+# === FileData ===
+FileData/Documents/*
+!FileData/Documents/.gitkeep
+
+FileData/FinalCutPro/*
+!FileData/FinalCutPro/.gitkeep
+
+FileData/MuMuShare/*
+!FileData/MuMuShare/.gitkeep
+
+FileData/Pictures/*
+!FileData/Pictures/.gitkeep
+
+# === UserData ===
+UserData/Dropbox/*
+!UserData/Dropbox/.gitkeep
+
+UserData/QQUser/*
+!UserData/QQUser/.gitkeep
