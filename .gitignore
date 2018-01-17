@@ -3,66 +3,66 @@
 
 # === Development ===
 # ---
-Development/Environment/CXF/*
-!Development/Environment/CXF/.gitkeep
+**/CXF/*
+!**/CXF/.gitkeep
 
-Development/Environment/Maven/*
-!Development/Environment/Maven/.gitkeep
+**/Maven/*
+!**/Maven/.gitkeep
 
-Development/Environment/Tomcat/*
-!Development/Environment/Tomcat/.gitkeep
-
-# ---
-Development/IDE/*
-!Development/IDE/.gitkeep
+**/Tomcat/*
+!**/Tomcat/.gitkeep
 
 # ---
-Development/Project/Android/*
-!Development/Project/Android/.gitkeep
+**/IDE/*
+!**/IDE/.gitkeep
 
-Development/Project/C#/*
-!Development/Project/C#/.gitkeep
-
-Development/Project/GitHub/*
-!Development/Project/GitHub/.gitkeep
-
-Development/Project/iOS/*
-!Development/Project/iOS/.gitkeep
-
-Development/Project/Java/*
-!Development/Project/Java/.gitkeep
-
-Development/Project/JS/*
-!Development/Project/JS/.gitkeep
-
-Development/Project/VBS/*
-!Development/Project/VBS/.gitkeep
 # ---
-Development/Workspace/eclipse/*
-!Development/Workspace/eclipse/.gitkeep
+**/Android/*
+!**/Android/.gitkeep
+
+**/C#/*
+!**/C#/.gitkeep
+
+**/GitHub/*
+!**/GitHub/.gitkeep
+
+**/iOS/*
+!**/iOS/.gitkeep
+
+Development/**/Java/*
+!**/Java/.gitkeep
+
+**/JS/*
+!**/JS/.gitkeep
+
+**/VBS/*
+!**/VBS/.gitkeep
+# ---
+**/eclipse/*
+!**/eclipse/.gitkeep
 
 # === FileData ===
-FileData/Documents/*
-!FileData/Documents/.gitkeep
+**/Documents/*
+!**/Documents/.gitkeep
 
-FileData/FinalCutPro/*
-!FileData/FinalCutPro/.gitkeep
+**/FinalCutPro/*
+!**/FinalCutPro/.gitkeep
 
-FileData/MuMuShare/*
-!FileData/MuMuShare/.gitkeep
+**/MuMuShare/*
+!**/MuMuShare/.gitkeep
 
-FileData/Pictures/Others/*
-!FileData/Pictures/Others/.gitkeep
+**/Others/*
+!**/Others/.gitkeep
 
-FileData/Pictures/Screenshots/*
-!FileData/Pictures/Screenshots/.gitkeep
+**/Screenshots/*
+!**/Screenshots/.gitkeep
 
-FileData/Pictures/Wallpaper/*
-!FileData/Pictures/Wallpaper/.gitkeep
+**/Wallpaper/*
+!**/Wallpaper/.gitkeep
 
 # === UserData ===
-UserData/Dropbox/*
-!UserData/Dropbox/.gitkeep
+**/Dropbox/*
+!**/Dropbox/.gitkeep
 
-UserData/QQUser/*
-!UserData/QQUser/.gitkeep
+**/QQUser/*
+!**/QQUser/.gitkeep
