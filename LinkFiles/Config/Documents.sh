@@ -41,6 +41,12 @@ DESTINATION_PATH=$HOME"/Documents/Documents"
 SOURCE_PATH=$ROOT_PATH"/FileData/Documents"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
+info "> Link GitHub Files.."
+# Link GitHub To GitHub
+DESTINATION_PATH=$HOME"/Documents/GitHub"
+SOURCE_PATH=$ROOT_PATH"/Development/Project/GitHub"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
 # Link MuMuShare File To Documents
 DESTINATION_PATH=$HOME"/Documents/MuMu共享文件夹"
 SOURCE_PATH=$ROOT_PATH"/FileData/MuMuShare"
