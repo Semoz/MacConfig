@@ -41,4 +41,5 @@ sh ./_Start_Recover or double click _Start_Recover
 
 #####其他 Others
 >APFS简直就是神器啊！！macOS当初考虑要不要分区，就是担心分区后，不够用的情况下要移动数据，有了APFS之后简直不要太爽，系统分区和数据分区共用一个磁盘，配合脚本之后，几乎不用担心备份任何数据，直接抹掉磁盘重装，然后脚本一键恢复。  
+
 #####真正实现了 One Key Recovery
