@@ -37,5 +37,5 @@ link_data_path(){
 
 info "> Link QQ User Chat Files.."
 DESTINATION_PATH=$HOME"/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ"
-SOURCE_PATH=$ROOT_PATH"/UserData/QQUser"
+SOURCE_PATH=$ROOT_PATH"/FileData/QQUser"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

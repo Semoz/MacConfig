@@ -12,7 +12,7 @@ info "Current Directory:\t"$ROOT_PATH
 info ""
 #链接Dropbox目录
 DESTINATION_PATH=$HOME"/Dropbox"
-SOURCE_PATH=$ROOT_PATH"/UserData/Dropbox"
+SOURCE_PATH=$ROOT_PATH"/FileData/Dropbox"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 #链接MacConfig目录
 DESTINATION_PATH=$HOME"/MacConfig"

@@ -21,7 +21,7 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share QQ User Chat Log
 DESTINATION_PATH=$HOME"/Documents/ShareData/QQ"
-SOURCE_PATH=$ROOT_PATH"/UserData/QQUser"
+SOURCE_PATH=$ROOT_PATH"/FileData/QQUser"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Repository
@@ -31,13 +31,18 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Windows Software
 DESTINATION_PATH=$HOME"/Documents/ShareData/Windows"
-SOURCE_PATH=$HOME"/Virtual Machine/Software/Windows"
+SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Software/Windows"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+# Link VMWare Share Windows XP SVN
+DESTINATION_PATH=$HOME"/Documents/ShareData/VisualSVN"
+SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Data/VisualSVN"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 ################################################################################
 # Link VMWare Create Path
 DESTINATION_PATH=$HOME"/Documents/Virtual Machines.localized"
-SOURCE_PATH=$HOME"/Virtual Machine/Vmware"
+SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Vmware"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link Parallels Create Path

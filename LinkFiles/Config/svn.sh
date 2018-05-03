@@ -6,5 +6,5 @@ source message
 
 info "> Link Subversion Config Files.."
 DESTINATION_PATH=$HOME"/.subversion"
-SOURCE_PATH=$ROOT_PATH"/subversion"
+SOURCE_PATH=$HOME"/Dropbox/_Configuration/Subversion"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

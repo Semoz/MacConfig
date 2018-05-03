@@ -43,5 +43,5 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link Android SDK File
 DESTINATION_PATH=$HOME"/Library/Android/sdk"
-SOURCE_PATH=$ROOT_PATH"/Development/IDE/Android/sdk"
+SOURCE_PATH=$ROOT_PATH"/Development/Environment/Android/Android/sdk"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
