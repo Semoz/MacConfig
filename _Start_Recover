@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
-cd "$(dirname "$0")/.."
+#locate MacConfig Path
+cd "$(dirname "$0")"
 ROOT_PATH=$(pwd -P)
-
 
 info () {
   printf "\r  [ \033[00;34m..\033[0m ] $1\n"
@@ -15,6 +15,7 @@ fail () {
 }
 
 ##################################################################################################
+# Install Brew Software
 info ""
 info "-------------------------------------------------------------------------"
 info ""
@@ -23,11 +24,12 @@ info ""
 if test ! $(which brew)
 	then
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	success "brew install success"
+	success "# brew install success"
 	else
-		fail "brew already installed"
+		fail "# brew already installed"
 fi
 
+# Install Shell oh-my-zsh
 info ""
 info "-------------------------------------------------------------------------"
 info "> Installing oh-my-zsh.."
@@ -35,28 +37,32 @@ info ""
 if [ ! -d ~/.oh-my-zsh ]
   then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    success "oh-my-zsh installed success"
+    success "# oh-my-zsh installed success"
 	else
-  	fail "oh-my-zsh already installed"
+  	fail "# oh-my-zsh already installed"
 fi
 
 ##################################################################################################
-MAC_CONFIG_PATH="MacConfig"
 
 # 1. Load Common Functions
-$MAC_CONFIG_PATH"/Functions/install"
+$ROOT_PATH"/1_Functions/install"
 
 # 2. Link Base Files & Install Plugs
-$MAC_CONFIG_PATH"/BasePlugs/install"
+$ROOT_PATH"/2_BasePlugs/install"
 
 # 3. Link Data Files
-$MAC_CONFIG_PATH"/LinkFiles/install"
+$ROOT_PATH"/3_LinkFiles/install"
 
 # 4. Link Dot Files
-$MAC_CONFIG_PATH"/DotFiles/install"
+$ROOT_PATH"/4_DotFiles/install"
 
 # 5. OSX Config
-$MAC_CONFIG_PATH"/OSX/install"
+$ROOT_PATH"/5_OSX/install"
 
 # 6. Install Brew Software
-$MAC_CONFIG_PATH"/Brew/install"
+$ROOT_PATH"/6_Brew/install"
+
+# 7. Install Necessary Scripts
+$ROOT_PATH"/7_Run/install"
+
+info "<<<<<<<<<<<<< End"

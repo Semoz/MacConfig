@@ -6,5 +6,5 @@ source message
 
 info "> Link Sublime Config Files.."
 DESTINATION_PATH=$HOME"/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-SOURCE_PATH=$ROOT_PATH"/sublime.cfg"
+SOURCE_PATH=$HOME"/_AppConfig/Application/Sublime Text 3/sublime.cfg"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

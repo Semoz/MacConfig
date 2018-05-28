@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-cd "$(dirname "$0")/../../.."
+cd "$(dirname "$0")"
 ROOT_PATH=$(pwd -P)
 source message
 info "> Link Vmware Files.."
@@ -11,7 +11,7 @@ mkdir -p $DESTINATION_PATH
 
 # Link VMWare Share Development
 DESTINATION_PATH=$HOME"/Documents/ShareData/Development"
-SOURCE_PATH=$ROOT_PATH"/Development"
+SOURCE_PATH=$HOME"/_MacData/Development"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Downloads
@@ -21,28 +21,28 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share QQ User Chat Log
 DESTINATION_PATH=$HOME"/Documents/ShareData/QQ"
-SOURCE_PATH=$ROOT_PATH"/FileData/QQUser"
+SOURCE_PATH=$HOME"/_AppData/QQ/QQUser"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Repository
 DESTINATION_PATH=$HOME"/Documents/ShareData/Repository"
-SOURCE_PATH=$ROOT_PATH"/Development/Environment/Maven/Repository"
+SOURCE_PATH=$HOME"/_MacData/Development/Environment/Maven/Repository"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Windows Software
 DESTINATION_PATH=$HOME"/Documents/ShareData/Windows"
-SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Software/Windows"
+SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Software/Windows"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Windows XP SVN
 DESTINATION_PATH=$HOME"/Documents/ShareData/VisualSVN"
-SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Data/VisualSVN"
+SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Data/VisualSVN"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 ################################################################################
 # Link VMWare Create Path
 DESTINATION_PATH=$HOME"/Documents/Virtual Machines.localized"
-SOURCE_PATH=$ROOT_PATH"/Virtual Machine/Vmware"
+SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Vmware"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link Parallels Create Path
