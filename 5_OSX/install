@@ -25,5 +25,8 @@ for src in $(find "$ROOT_PATH" -maxdepth 2 -name '*.sh' -not -path '*.git*')
 		info "Config.. "$(basename "${src%.*}")
 		$src
 done
+killall Dock
+killall Finder
+killall SystemUIServer
 info ""
 info "-------------------------------------------------------------------------"

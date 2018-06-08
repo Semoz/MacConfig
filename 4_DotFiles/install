@@ -1,9 +1,14 @@
-#!/bin/sh
-set -e
+#!/bin/sh -e
+
 cd "$(dirname "$0")"
 DOTFILES_ROOT=$(pwd -P)
 
 source message
+
+#-----------------------------------------------------------------------------
+# link dotfiles
+# 软链接dotfile
+#-----------------------------------------------------------------------------
 
 for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
 do

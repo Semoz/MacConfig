@@ -1,5 +1,5 @@
-#!/bin/sh
-set -e
+#!/bin/sh -e
+
 cd "$(dirname "$0")"
 ROOT_PATH=$(pwd -P)
 source message

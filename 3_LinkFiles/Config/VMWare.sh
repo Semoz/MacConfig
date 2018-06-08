@@ -45,6 +45,10 @@ DESTINATION_PATH=$HOME"/Documents/Virtual Machines.localized"
 SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Vmware"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
+DESTINATION_PATH=$HOME"/_Virtual Machine"
+SOURCE_PATH=$HOME"/_MacData/Virtual Machine"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
 # Link Parallels Create Path
 # DESTINATION_PATH=$HOME"/Parallels"
 # SOURCE_PATH=$HOME"/Virtual Machine/Parallels"
