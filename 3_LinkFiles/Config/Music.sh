@@ -21,3 +21,21 @@ info "> Link Logic Music Files.."
 DESTINATION_PATH=$HOME"/Music/Logic"
 SOURCE_PATH=$HOME"/_MacData/FileData/Music/Logic"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+info "> Link NeteaseMusic Music Files.."
+# Link Baidu Download
+DESTINATION_PATH=$HOME"/Music/网易云音乐"
+SOURCE_PATH=$HOME"/_MacData/FileData/Music/NeteaseMusic"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+info "> Link XiamiMusic Music Files.."
+# Link Baidu Download
+DESTINATION_PATH=$HOME"/Music/虾米音乐"
+SOURCE_PATH=$HOME"/_MacData/FileData/Music/XiamiMusic"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+info "> Link SoundEffect Music Files.."
+# Link Baidu Download
+DESTINATION_PATH=$HOME"/Music/音效&配乐"
+SOURCE_PATH=$HOME"/_MacData/FileData/Music/SoundEffect"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

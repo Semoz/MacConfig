@@ -1,8 +1,8 @@
 [hub]
   protocol = https
 [user]
-	name = Semoz
-	email = lee80386@hotmail.com
+	name = Semoz_test
+	email = mengzhang18@hotmail.com
 
 [color]
   diff = auto
@@ -28,13 +28,13 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   trustExitCode = false
-	path = 
+	path =
 [merge]
   tool = sourcetree
 [mergetool]
   keepBackup = false
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Volumes/MacDrive/MacData/Software/Applications/Developer Tools/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
   required = true
