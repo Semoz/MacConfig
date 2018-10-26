@@ -1,8 +1,8 @@
 [hub]
   protocol = https
 [user]
-	name = Semoz_test
-	email = lee80386@hotmail.com
+	name = Semoz
+	email = mengzhang18@hotmail.com
 
 [color]
   diff = auto
