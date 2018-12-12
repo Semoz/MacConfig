@@ -108,7 +108,7 @@ export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-#alias subl='~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
+alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl' # Open Sublime Text.app
 alias ls='ls -GFhl'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -123,7 +123,7 @@ alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
-alias edit='subl'                           # edit:         Opens any file in sublime editor
+alias edit='sublime'                           # edit:         Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
@@ -137,4 +137,10 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
+# proxy list
+alias proxy='export all_proxy=socks5://192.168.2.216:1080'
+alias unproxy='unset all_proxy'
+
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+

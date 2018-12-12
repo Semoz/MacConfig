@@ -15,7 +15,7 @@ info ""
 
 #链接Dropbox目录
 DESTINATION_PATH=$HOME"/Dropbox"
-SOURCE_PATH=$ROOT_PATH"/FileData/Dropbox"
+SOURCE_PATH=$ROOT_PATH"/FileData/CloudDrive"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 #链接AppData目录
@@ -25,7 +25,7 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 #链接AppConfig目录
 DESTINATION_PATH=$HOME"/_AppConfig"
-SOURCE_PATH=$HOME"/Dropbox/_Configuration"
+SOURCE_PATH=$ROOT_PATH"/FileData/CloudDrive/_Configuration"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 #链接MacData目录

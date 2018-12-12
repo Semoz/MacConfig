@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Check Dropbox Folder
-BASE_PATH=~/Dropbox/iterm2
+BASE_PATH=~/_AppConfig/Application/iTerm2
 
 if [ ! -d "$BASE_PATH" ]; then
 	mkdir $BASE_PATH
