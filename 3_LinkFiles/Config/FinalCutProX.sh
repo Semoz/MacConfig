@@ -13,3 +13,8 @@ info "> Link FCPX Final Cut Backups.."
 DESTINATION_PATH=$HOME"/Movies/Final Cut Backups.localized"
 SOURCE_PATH=$HOME"/_AppData/Final Cut Pro X/Final Cut Backups"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+info "> Link FCPX Final Cut Projects.."
+DESTINATION_PATH=$HOME"/Movies/Final Cut Projects"
+SOURCE_PATH=$HOME"/_AppData/Final Cut Pro X/Final Cut Projects"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"

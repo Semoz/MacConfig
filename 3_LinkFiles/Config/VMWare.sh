@@ -11,7 +11,7 @@ mkdir -p $DESTINATION_PATH
 
 # Link VMWare Share Development
 DESTINATION_PATH=$HOME"/Documents/ShareData/Development"
-SOURCE_PATH=$HOME"/_MacData/Development"
+SOURCE_PATH=$HOME"/_Development"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Downloads
@@ -26,27 +26,23 @@ link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Repository
 DESTINATION_PATH=$HOME"/Documents/ShareData/Repository"
-SOURCE_PATH=$HOME"/_MacData/Development/Environment/Maven/Repository"
+SOURCE_PATH=$HOME"/_Development/Environment/Maven/Repository"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Windows Software
 DESTINATION_PATH=$HOME"/Documents/ShareData/Windows"
-SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Software/Windows"
+SOURCE_PATH=$HOME"/_VirtualMachine/Software/Windows"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link VMWare Share Windows XP SVN
 DESTINATION_PATH=$HOME"/Documents/ShareData/VisualSVN"
-SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Data/VisualSVN"
+SOURCE_PATH=$HOME"/_VirtualMachine/Data/VisualSVN"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 ################################################################################
 # Link VMWare Create Path
 DESTINATION_PATH=$HOME"/Documents/Virtual Machines.localized"
-SOURCE_PATH=$HOME"/_MacData/Virtual Machine/Vmware"
-link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
-
-DESTINATION_PATH=$HOME"/_Virtual Machine"
-SOURCE_PATH=$HOME"/_MacData/Virtual Machine"
+SOURCE_PATH=$HOME"/_VirtualMachine/Vmware"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 # Link Parallels Create Path

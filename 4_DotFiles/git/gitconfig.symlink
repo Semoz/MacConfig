@@ -2,7 +2,7 @@
   protocol = https
 [user]
 	name = Semoz
-	email = mengzhang18@hotmail.com
+	email = mengzhang18@gmail.com
 
 [color]
   diff = auto
@@ -28,9 +28,9 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   trustExitCode = false
-	path =
+	path = 
 [merge]
-  tool = sourcetree
+	tool = sourcetree
 [mergetool]
   keepBackup = false
 [mergetool "sourcetree"]
@@ -43,3 +43,4 @@
 	process = git-lfs filter-process
 [commit]
 	gpgsign = false
+	template = /Users/Semoz/.stCommitMsg

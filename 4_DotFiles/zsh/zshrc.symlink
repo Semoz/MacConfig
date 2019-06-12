@@ -95,12 +95,12 @@ source $ZSH/oh-my-zsh.sh
 #   使用 "jdk7" "jdk8" "jdk9" 来切换jdk版本，默认jdk8
 #-------------------------------------------------------------------------------
 export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-export JAVA_9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
+#export JAVA_9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export JAVA_HOME=$JAVA_8_HOME
 alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
 alias jdk7='export JAVA_HOME=$JAVA_7_HOME'
-alias jdk9='export JAVA_HOME=$JAVA_9_HOME'
+#alias jdk9='export JAVA_HOME=$JAVA_9_HOME'
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
@@ -160,7 +160,7 @@ ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in Ma
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
 # proxy list
-alias proxy='export all_proxy=socks5://192.168.2.216:1080'
+alias proxy='export all_proxy=socks5://127.0.0.1:1086'
 alias unproxy='unset all_proxy'
 
 
