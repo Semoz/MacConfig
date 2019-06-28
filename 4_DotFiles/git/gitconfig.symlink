@@ -34,7 +34,7 @@
 [mergetool]
   keepBackup = false
 [mergetool "sourcetree"]
-	cmd = /Volumes/MacDrive/MacData/Software/Applications/Developer Tools/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /private/var/folders/pn/6pg8fj1s1rld02k1f6fdm1zm0000gn/T/AppTranslocation/EADDAC4F-1B59-4AE7-8AA5-967B5E9AD8EC/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
   required = true
