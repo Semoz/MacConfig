@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+source message
+info "-------------------------------------------------------------------------"
+info "#########################################################################"
+info "#"
+info "#\t\t Run Necessary Scripts"
+info "#"
+info "#########################################################################"
+info ""
+info "Current Directory:\t"$ROOT_PATH
+info ""
+OLDIFS=$IFS
+IFS=$'\n'
+for path in $(find "$ROOT_PATH" -maxdepth 7 -type d -print)
+	do
+		path=${path// /\\ }
+		xattr -c $path/*
+		echo $path/*
+done
+info ""
+info "-------------------------------------------------------------------------"
+IFS=$OLDIFS
+
+#find . -type d -exec xattr -c {}/* \;
+
+#find ./ -name '*.bak' -print0.  -maxdepth 2
