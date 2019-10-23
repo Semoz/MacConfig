@@ -1,0 +1,5 @@
+open ~/Library/LaunchAgents            # 特定用户登录后以当前用户启动，第三方程序一般都放这里
+open /Library/LaunchAgents             # 任一用户登录后以当前用户启动，管理员使用
+open /System/Library/LaunchAgents      # 系统组件，任一用户登录后以当前用户启动
+open /Library/LaunchDaemons            # 系统装载时以root用户启动，管理员使用
+open /System/Library/LaunchDaemons     # 系统组件，系统装载时以root用户启动
