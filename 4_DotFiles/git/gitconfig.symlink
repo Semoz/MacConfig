@@ -45,3 +45,5 @@
 [commit]
 	gpgsign = false
 	template = /Users/Semoz/.stCommitMsg
+[credential]
+	helper = store

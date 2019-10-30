@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 cd "$(dirname "$0")"
 ROOT_PATH=$(pwd -P)
 source message
@@ -18,6 +17,7 @@ for path in $(find "$ROOT_PATH" -maxdepth 7 -type d -print)
 	do
 		path=${path// /\\ }
 		xattr -c $path/*
+		xattr -c $path/*.*
 		echo $path/*
 done
 info ""
