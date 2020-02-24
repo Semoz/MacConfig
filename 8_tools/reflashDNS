@@ -1,0 +1,22 @@
+#!/bin/sh
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+source message
+info "-------------------------------------------------------------------------"
+info "#########################################################################"
+info "#"
+info "#\t\t Run Necessary Scripts"
+info "#"
+info "#########################################################################"
+info ""
+info "Current Directory:\t"$ROOT_PATH
+info ""
+sudo killall -HUP mDNSResponder
+sudo killall mDNSResponderHelper
+sudo dscacheutil -flushcache
+info ""
+info "-------------------------------------------------------------------------"
+
+#find . -type d -exec xattr -c {}/* \;
+
+#find ./ -name '*.bak' -print0.  -maxdepth 2
