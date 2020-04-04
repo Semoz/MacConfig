@@ -10,10 +10,20 @@ DESTINATION_PATH=$HOME"/Documents/Development"
 SOURCE_PATH=$HOME"/_Development"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
+# Create Documents Files
+DESTINATION_PATH=$HOME"/Documents/Documents"
+mkdir -p $DESTINATION_PATH
+
 info "> Link Documents Files.."
 # Link Documents To Documents
-DESTINATION_PATH=$HOME"/Documents/Documents"
-SOURCE_PATH=$HOME"/_FileData/Documents"
+DESTINATION_PATH=$HOME"/Documents/Documents/Work"
+SOURCE_PATH=$HOME"/Dropbox/_Work"
+link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
+
+info "> Link Documents Files.."
+# Link Documents To Documents
+DESTINATION_PATH=$HOME"/Documents/Documents/User"
+SOURCE_PATH=$HOME"/Dropbox/_User"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 info "> Link GitHub Files.."
