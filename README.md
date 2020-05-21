@@ -53,6 +53,10 @@
 mkdir -pv /Volumes/MacDrive/MacData/{1_Configuration,2_Development/{Environment,Project/{GitHub,GitLab},Workspace/{eclipse,vscode}},3_FileData/{AppData,CloudDrive,Downloads,Music,Pictures},4_Software/{Applications/{Apple,Browser,Developer,File,Graphics,SNS,Tools},DMG},5_VirtualMachine/{VMware/{macOS,Windows},Software/Windows}}
 ```
 
+```
+cd /Volumes/MacDrive/MacData
+git clone -b master https://github.com/Semoz/MacConfig.git 1_Configuration
+```
 
 
 
