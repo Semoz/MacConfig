@@ -8,9 +8,9 @@ source message
 info ""
 info "-------------------------------------------------------------------------"
 info ""
-info "Link VirtualMachine To HOME.."
+info "Link 5_Virtual_Machine To {HOME}/_VirtualMachine"
 info ""
-info "Current Directory:\t"$ROOT_PATH
+info "Current Directory is:\t"$ROOT_PATH
 info ""
 
 #链接VirtualMachine目录

@@ -8,9 +8,9 @@ source message
 info ""
 info "-------------------------------------------------------------------------"
 info ""
-info "Link _MacConfig To HOME.."
+info "Link 1_Configuration To {HOME}/_MacConfig"
 info ""
-info "Current Directory:\t"$ROOT_PATH
+info "Current Directory is:\t"$ROOT_PATH
 info ""
 
 #链接MacConfig目录

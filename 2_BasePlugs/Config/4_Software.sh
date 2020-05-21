@@ -8,9 +8,9 @@ source message
 info ""
 info "-------------------------------------------------------------------------"
 info ""
-info "Link Software To HOME.."
+info "Link 4_Software To {HOME}/_Software"
 info ""
-info "Current Directory:\t"$ROOT_PATH
+info "Current Directory is:\t"$ROOT_PATH
 info ""
 
 #链接Software录

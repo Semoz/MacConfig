@@ -8,9 +8,9 @@ source message
 info ""
 info "-------------------------------------------------------------------------"
 info ""
-info "Link _Development To HOME.."
+info "Link 2_Development To {HOME}/_Development"
 info ""
-info "Current Directory:\t"$ROOT_PATH
+info "Current Directory is:\t"$ROOT_PATH
 info ""
 
 #链接Development目录
