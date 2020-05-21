@@ -15,10 +15,10 @@ info ""
 
 #链接AppConfig目录
 DESTINATION_PATH=$HOME"/_AppConfig"
-SOURCE_PATH=$ROOT_PATH"/3_File_Data/CloudDrive/_Configuration"
+SOURCE_PATH=$ROOT_PATH"/3_FileData/CloudDrive/_Configuration"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
 
 #链接Dropbox目录
 DESTINATION_PATH=$HOME"/Dropbox"
-SOURCE_PATH=$ROOT_PATH"/3_File_Data/CloudDrive"
+SOURCE_PATH=$ROOT_PATH"/3_FileData/CloudDrive"
 link_data_path "$SOURCE_PATH" "$DESTINATION_PATH"
