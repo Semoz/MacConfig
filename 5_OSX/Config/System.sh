@@ -2,10 +2,10 @@
 #sudo -v
 #-------------------------------------------------------------------------------
 # 设置MacBook Pro 计算机名字 包括共享中的名字
-sudo scutil --set ComputerName "Semoz-MBP"
-sudo scutil --set HostName "Semoz-MBP"
-sudo scutil --set LocalHostName "Semoz-MBP"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Semoz-MBP"
+sudo scutil --set ComputerName "Semoz-Mini"
+sudo scutil --set HostName "Semoz-Mini"
+sudo scutil --set LocalHostName "Semoz-Mini"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Semoz-Mini"
 #-------------------------------------------------------------------------------
 # 使用暗色菜单栏和doc
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
