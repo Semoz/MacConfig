@@ -36,3 +36,38 @@
 >因APFS的支持，macOS已经不需要考虑分区影响硬盘的情况，系统分区和数据分区共用一个磁盘，配合脚本之后，几乎不用备份任何数据，直接抹掉磁盘重装，然后脚本一键恢复。
 
 ##### For One Key Recovery
+
+
+
+---
+
+操作步骤：
+
+1. 创建一个APFS分区`MacDrive`
+2. 创建文件目录
+
+
+
+创建需要的文件目录
+```
+mkdir -pv /Volumes/MacDrive/MacData1/{1_Configuration,2_Development/{Environment,Project/{GitHub,GitLab},Workspace/{eclipse,vscode}},3_FileData/{AppData,CloudDrive,Downloads,Music,Pictures},4_Software/{Applications/{Apple,Browser,Developer,File,Graphics,SNS,Tools},DMG},5_VirtualMachine/{VMware/{macOS,Windows},Software/Windows}}
+```
+
+mkdir -vp `/Volumes/MacDrive/MacData/{
+1_Configuration,
+2_Development/{Environment, Project/{GitHub, GitLab}, Workspace/{eclipse, vscode}},
+3_FileData/{AppData, CloudDrive, Downloads, Music, Pictures},
+4_Software/{Applications/{Apple, Browser, Developer, File, Graphics, SNS, Tools}, DMG},
+5_VirtualMachine/{VMware/{macOS, Windows}, Software/{Windows}}
+}`
+
+
+
+1. 上电视
+
+
+
+
+
+
+

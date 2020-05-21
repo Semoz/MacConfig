@@ -8,9 +8,9 @@ source message
 info ""
 info "-------------------------------------------------------------------------"
 info ""
-info "Link VirtualMachine To HOME.."
+info "Link MacData To {HOME}/_MacData"
 info ""
-info "Current Directory:\t"$ROOT_PATH
+info "Current Directory is:\t"$ROOT_PATH
 info ""
 
 #链接MacData目录
