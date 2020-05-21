@@ -50,20 +50,13 @@
 
 创建需要的文件目录
 ```
-mkdir -pv /Volumes/MacDrive/MacData1/{1_Configuration,2_Development/{Environment,Project/{GitHub,GitLab},Workspace/{eclipse,vscode}},3_FileData/{AppData,CloudDrive,Downloads,Music,Pictures},4_Software/{Applications/{Apple,Browser,Developer,File,Graphics,SNS,Tools},DMG},5_VirtualMachine/{VMware/{macOS,Windows},Software/Windows}}
+mkdir -pv /Volumes/MacDrive/MacData/{1_Configuration,2_Development/{Environment,Project/{GitHub,GitLab},Workspace/{eclipse,vscode}},3_FileData/{AppData,CloudDrive,Downloads,Music,Pictures},4_Software/{Applications/{Apple,Browser,Developer,File,Graphics,SNS,Tools},DMG},5_VirtualMachine/{VMware/{macOS,Windows},Software/Windows}}
 ```
 
-mkdir -vp `/Volumes/MacDrive/MacData/{
-1_Configuration,
-2_Development/{Environment, Project/{GitHub, GitLab}, Workspace/{eclipse, vscode}},
-3_FileData/{AppData, CloudDrive, Downloads, Music, Pictures},
-4_Software/{Applications/{Apple, Browser, Developer, File, Graphics, SNS, Tools}, DMG},
-5_VirtualMachine/{VMware/{macOS, Windows}, Software/{Windows}}
-}`
 
 
 
-1. 上电视
+
 
 
 
