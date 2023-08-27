@@ -1,0 +1,39 @@
+#!/bin/sh -e
+sudo -v
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+
+# 初始化项目
+# 创建文件夹
+
+mkdir -vp /Applications/_Apps
+
+
+
+#for src in $(find "$ROOT_PATH" -maxdepth 2 -name '*.app' -not -path '*.git*')
+#  do
+#    DESTINATION_PATH="/Applications/apps/"$(basename "${src%.*}").app
+#    SOURCE_PATH=$src
+#    echo $DESTINATION_PATH
+#    echo $SOURCE_PATH
+#    #link_data_file "$SOURCE_PATH" "$DESTINATION_PATH"
+#done
+
+
+
+
+
+for element in `find "$ROOT_PATH" -maxdepth 2 -name '*.app' -not -path '*.git*' | tr " " "\?"`
+do 
+    element=`tr "\?" " " <<<$element`
+    apps="$element"
+    SOURCE_PATH="$apps"
+    DESTINATION_PATH="/Applications/_Apps/"$(basename "${apps%.*}").app
+    echo $DESTINATION_PATH
+    echo $SOURCE_PATH
+    link_data_file "$SOURCE_PATH" "$DESTINATION_PATH"
+done
+
+
+
+

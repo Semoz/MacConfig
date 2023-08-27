@@ -1,0 +1,20 @@
+#!/bin/sh -e
+sudo -v
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+
+# 初始化项目
+# 创建文件夹
+
+# 根目录
+BASE_PATH=$ROOT_PATH/MacData
+# 归档文件：文档、视频、图片、音乐、下载、虚拟化、应用数据、网盘
+mkdir -vp $BASE_PATH/Archive/{Video,Picture/{Screenshot,Wallpaper,Other},Music,Download/{Thunder,Browser,Baidu},Virtualization/{VirtualMachine/{VMware/{Linux,macOS,Windows},Software},Container/Docker},AppData,CloudDrive/{Dropbox,SynologyDrive}}
+# 配置文件：同步git上的系统配置?后面看看要不要clone创建
+mkdir -vp $BASE_PATH/Configuration
+# 开发者：插件、环境、项目、工作空间
+mkdir -vp $BASE_PATH/Developer/{Component/{Chrome,Idea,Typora},Environment/{Maven,Nodejs,Tomcat,Gradle},Project/{Bitbucket,Codeup,Coding,Github,Gitlab,Gitee,Other},Workspace/{eclipse,php,vscode}}
+# 软件库：软件安装
+mkdir -vp $BASE_PATH/Software/{Applications/{common,application,media,network,developer,design,industry,safe,system,games,other},Package}
+
+sudo chown -R Semoz:admin $BASE_PATH

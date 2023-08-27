@@ -1,0 +1,28 @@
+#!/bin/sh -e
+#sudo -v #请求管理员权限
+cd "$(dirname "$0")"
+ROOT_PATH=$(pwd -P)
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+}
+
+for SOURCE in $(find "$ROOT_PATH" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+do
+  info "> Link dotfile ...$(basename "${SOURCE%.*}")"
+  DESTINATION="$HOME/.$(basename "${SOURCE%.*}")"
+  ln -sf "$SOURCE" "$DESTINATION"
+  success "..."
+done
+
+rm -rf $HOME"/.vim"
+
+info "> Link vim File..."
+DESTINATION=$HOME"/.vim"
+SOURCE=$ROOT_PATH"/vim-config"
+ln -sf "$SOURCE" "$DESTINATION"
