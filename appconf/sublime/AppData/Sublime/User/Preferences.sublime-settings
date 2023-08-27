@@ -7,8 +7,7 @@
      "ignored_packages":
     [
         "GoSublime",
-        "Markdown",
-        "Vintage"
+        "Vintage",
     ],
     "update_check": false,
     "word_wrap": "false",
@@ -19,7 +18,7 @@
     "scroll_past_end": true,
     "show_encoding": true,
     "highlight_line": true,
-    "fold_buttons": true
+    "fold_buttons": true,
 }
 
 /*
